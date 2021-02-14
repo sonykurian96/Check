@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spam_bot/VideoPage.dart';
+import 'package:spam_bot/pageWaveTransition.dart';
 
 void main() {
   runApp(
@@ -26,15 +27,30 @@ class _AppState extends State<App> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-              context,
-              PageRouteBuilder(
+              Navigator.push(
+                context,PageRouteBuilder(
                   pageBuilder: (context, animation, _) {
-                    return VideoPage();
+                    return WaveTransition(
+                      targetPage: VideoPage(),
+                      fromCenter: FractionalOffset(0.50,0.90),
+                    );
                   },
-                  opaque: false));
+                  opaque: false)
+              );
         },
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
+
+// Navigator.push(
+// context,PageRouteBuilder(
+// pageBuilder: (context, animation, _) {
+// return WaveTransition(
+// targetPage: VideoPage(),
+// fromCenter: FractionalOffset(0.50,0.90),
+// );
+// },
+// opaque: false)
+// );
