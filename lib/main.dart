@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:spam_bot/customwidget.dart';
+import 'package:spam_bot/VideoPage.dart';
 
 void main() {
   runApp(
@@ -17,46 +17,24 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-
-  bool displayAnswer = false;
-
-  Widget button(){
-    return RaisedButton(
-      textColor: Colors.white,
-      color: Colors.orange[500],
-      child: Text("View Answer"),
-      onPressed: () {
-        setState(() {
-          displayAnswer = true;
-        });
-      },
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30.0),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("My first package"),
         centerTitle: true,
-        title: Text("Welcome"),
       ),
-      body: Column(
-        children: [
-          Custom(videoLink: "https://www.youtube.com/watch?v=W1pNjxmNHNQ",
-            question: "question-1",
-            answer: "answer-1",
-            customRaisedButton: button(),
-            isVisible: displayAnswer,
-            // well, this actually works
-          )
-        ],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context,
+              PageRouteBuilder(
+                  pageBuilder: (context, animation, _) {
+                    return VideoPage();
+                  },
+                  opaque: false));
+        },
       ),
     );
   }
 }
-
-
-
