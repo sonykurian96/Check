@@ -43,14 +43,3 @@ class _AppState extends State<App> {
     );
   }
 }
-
-// Navigator.push(
-// context,PageRouteBuilder(
-// pageBuilder: (context, animation, _) {
-// return WaveTransition(
-// targetPage: VideoPage(),
-// fromCenter: FractionalOffset(0.50,0.90),
-// );
-// },
-// opaque: false)
-// );
