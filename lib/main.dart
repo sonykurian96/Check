@@ -26,20 +26,16 @@ class _AppState extends State<App> {
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
         onPressed: () {
               Navigator.push(
-                context,PageRouteBuilder(
-                  pageBuilder: (context, animation, _) {
-                    return WaveTransition(
-                      targetPage: VideoPage(),
-                      fromCenter: FractionalOffset(0.50,0.90),
-                    );
-                  },
-                  opaque: false)
+                context, WaveTransition(
+                  child: VideoPage(),
+                  center: FractionalOffset(0.90,0.90),
+              )
               );
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

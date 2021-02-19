@@ -11,7 +11,11 @@ class _VideoPageState extends State<VideoPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      //backgroundColor: Colors.transparent,
+      appBar: AppBar(
+        title: Text("SecondScreen"),
+        centerTitle: true,
+      ),
       body: SafeArea(
             child: Container(
               color: Colors.amber,
