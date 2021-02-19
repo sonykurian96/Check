@@ -156,6 +156,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0-nullsafety.3"
+  wave_transition:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: dbaf35496ee8cf05d2dd6f12f933f0e902530b67
+      url: "https://github.com/sonykurian96/wave_transition.git"
+    source: git
+    version: "0.0.1"
   webview_media:
     dependency: transitive
     description:
