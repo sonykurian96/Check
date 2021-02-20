@@ -1,4 +1,3 @@
-import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -24,7 +23,6 @@ class Custom extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
         child: Card(
-          // leading: Icon(Icons.star_border,color: Colors.amber,),
           shadowColor: Colors.amber,
           child: Column(
           children: [

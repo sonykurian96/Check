@@ -1,4 +1,3 @@
-import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 import 'customWidget.dart';
 
@@ -10,19 +9,12 @@ class SecondScreen extends StatefulWidget {
 
 class _SecondScreenState extends State<SecondScreen> {
 
-  bool displayAnswer = false;
-  final GlobalKey<ExpansionTileCardState> cardA = new GlobalKey();
-
-
   Widget button(){
     return RaisedButton(
       textColor: Colors.white,
       color: Colors.orange[500],
       child: Text("View Answer"),
       onPressed: () {
-        setState(() {
-          displayAnswer = !displayAnswer;
-        });
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30.0),
